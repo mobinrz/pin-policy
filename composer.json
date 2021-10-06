@@ -1,0 +1,37 @@
+{
+    "name": "mobin/pin-policy",
+    "description": "Standard pin policy package for laravel projects. Features are force change pin every X days and new never use last passwords. Also pin must be set on a standard policy",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mobin",
+            "email": "ahmobin.cse@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mobin\\PinPolicy\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mobin\\PinPolicy\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mobin\\PinPolicy\\Providers\\PasswordPolicyServiceProvider"
+            ]
+        }
+    }
+}
